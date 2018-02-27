@@ -1,0 +1,7 @@
+---
+# configuring Docker
+- name: Sending conf file daemon.json
+  copy: src=daemon.json dest=/etc/docker/daemon.json
+  become: true
+  notify: 
+   - restart docker service
