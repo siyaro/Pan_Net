@@ -1,0 +1,13 @@
+---
+# tasks file for rsyslog
+- include: service.yml
+
+- include: local_def.yml
+  when: rsys_conf == "1"
+
+- include: local_spec.yml
+  when: rsys_conf == "2"
+
+- include: remote.yml
+  when: rsys_conf == "3"
+

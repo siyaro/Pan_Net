@@ -1,0 +1,7 @@
+---
+# check if the rsyslog is available
+- name: Install rsyslog package
+  apt:
+   name: rsyslog
+   state: latest
+  become: true

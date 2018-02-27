@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  roles: 
+     - rsyslog
+  vars_prompt:
+    - name: "rsys_conf"
+      prompt: "Please select desired rsyslog configuration. 1 -> Logging Default; 2 -> Logging Custom Logs; 3 -> Logging External "
+      private: no
+

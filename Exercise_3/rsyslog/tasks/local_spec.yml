@@ -1,0 +1,15 @@
+---
+# Copy configuration for Remote log collection
+- name: Sending conf 
+  copy: src=rsyslog_local.conf dest=/etc/rsyslog.conf
+  become: true
+
+- name: Create rsyslog.d
+  file: path=/etc/rsyslog.d state=directory
+  become: true
+
+- name: Copy rsyslog.d to remote host
+  copy: src=rsyslog.d/ dest=/etc/rsyslog.d/ directory_mode=yes
+  become: true
+  notify:
+    - restart rsyslog
