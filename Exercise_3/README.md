@@ -7,3 +7,5 @@ This is done by Ansible. I used user prompt messages to use propper tasks to acc
   ● logging only default log files
   ● logging custom files
   ● selecting external log server to send logs to
+  
+As playground I use stuff from Exercise_1 and use configuration for loging Docker and also docker container with weather grabber. 
