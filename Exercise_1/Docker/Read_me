@@ -1,1 +1,0 @@
-sudo docker run --rm -e OPENWEATHER_API_KEY="d11065f6e7d5970f00984e11a0d75b53" -e CITY_NAME="Honolulu" weather:dev >/dev/null
